@@ -1,0 +1,193 @@
+<footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-section">
+      <h4>{{ section.settings.footer_title }}</h4>
+      <p>{{ section.settings.footer_description }}</p>
+    </div>
+
+    <div class="footer-section">
+      <h4>Links Rápidos</h4>
+      <ul>
+        <li><a href="#como-funciona">¿Cómo Funciona?</a></li>
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#cobertura">Cobertura</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-section">
+      <h4>Redes Sociales</h4>
+      <div class="social-links">
+        {% if section.settings.facebook_url %}
+          <a href="{{ section.settings.facebook_url }}" target="_blank">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+        {% endif %}
+        {% if section.settings.instagram_url %}
+          <a href="{{ section.settings.instagram_url }}" target="_blank">
+            <i class="fab fa-instagram"></i>
+          </a>
+        {% endif %}
+        {% if section.settings.twitter_url %}
+          <a href="{{ section.settings.twitter_url }}" target="_blank">
+            <i class="fab fa-twitter"></i>
+          </a>
+        {% endif %}
+        {% if section.settings.whatsapp %}
+          <a href="https://wa.me/{{ section.settings.whatsapp }}" target="_blank">
+            <i class="fab fa-whatsapp"></i>
+          </a>
+        {% endif %}
+      </div>
+    </div>
+
+    <div class="footer-section">
+      <h4>Legal</h4>
+      <ul>
+        <li><a href="{{ section.settings.privacy_link }}">Privacidad</a></li>
+        <li><a href="{{ section.settings.terms_link }}">Términos</a></li>
+        <li><a href="{{ section.settings.cookies_link }}">Cookies</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>&copy; {{ 'now' | date: '%Y' }} {{ shop.name }}. Todos los derechos reservados.</p>
+  </div>
+</footer>
+
+<style>
+  .site-footer {
+    background: #2c3e50;
+    color: #ecf0f1;
+    padding: 60px 20px 20px;
+  }
+
+  .footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .footer-section h4 {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    color: white;
+  }
+
+  .footer-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .footer-section li {
+    margin-bottom: 0.5rem;
+  }
+
+  .footer-section a {
+    color: #bdc3c7;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+
+  .footer-section a:hover {
+    color: #667eea;
+  }
+
+  .footer-section p {
+    margin: 0;
+    line-height: 1.6;
+    color: #bdc3c7;
+  }
+
+  .social-links {
+    display: flex;
+    gap: 1rem;
+  }
+
+  .social-links a {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255,255,255,0.1);
+    border-radius: 50%;
+    transition: all 0.3s;
+  }
+
+  .social-links a:hover {
+    background: #667eea;
+    transform: scale(1.1);
+  }
+
+  .footer-bottom {
+    text-align: center;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    color: #95a5a6;
+  }
+
+  @media (max-width: 768px) {
+    .footer-container { grid-template-columns: 1fr; }
+  }
+</style>
+
+{% schema %}
+{
+  "name": "Footer",
+  "settings": [
+    {
+      "type": "text",
+      "id": "footer_title",
+      "label": "Título del footer",
+      "default": "CocinaEnApp"
+    },
+    {
+      "type": "textarea",
+      "id": "footer_description",
+      "label": "Descripción",
+      "default": "Tu aliado en la entrega de comida. Conectamos tu restaurante con miles de clientes."
+    },
+    {
+      "type": "url",
+      "id": "facebook_url",
+      "label": "Facebook URL"
+    },
+    {
+      "type": "url",
+      "id": "instagram_url",
+      "label": "Instagram URL"
+    },
+    {
+      "type": "url",
+      "id": "twitter_url",
+      "label": "Twitter URL"
+    },
+    {
+      "type": "text",
+      "id": "whatsapp",
+      "label": "WhatsApp (sin +)"
+    },
+    {
+      "type": "url",
+      "id": "privacy_link",
+      "label": "Link Privacidad"
+    },
+    {
+      "type": "url",
+      "id": "terms_link",
+      "label": "Link Términos"
+    },
+    {
+      "type": "url",
+      "id": "cookies_link",
+      "label": "Link Cookies"
+    }
+  ]
+}
+{% endschema %}

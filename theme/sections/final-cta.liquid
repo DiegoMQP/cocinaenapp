@@ -1,0 +1,155 @@
+<section class="final-cta" id="contacto">
+  <div class="cta-container">
+    <h2>¿Listo para Crecer?</h2>
+    <p>Únete a miles de restaurantes que ya confían en CocinaEnApp</p>
+    
+    <div class="cta-buttons">
+      <a href="{{ section.settings.primary_btn_link }}" class="btn btn-large btn-primary">
+        {{ section.settings.primary_btn_text }}
+      </a>
+      <a href="https://wa.me/{{ section.settings.whatsapp }}" class="btn btn-large btn-whatsapp">
+        <i class="fab fa-whatsapp"></i> {{ section.settings.whatsapp_btn_text }}
+      </a>
+    </div>
+
+    <div class="cta-stats">
+      <div class="stat">
+        <div class="stat-number">5000+</div>
+        <div class="stat-label">Restaurantes</div>
+      </div>
+      <div class="stat">
+        <div class="stat-number">50+</div>
+        <div class="stat-label">Ciudades</div>
+      </div>
+      <div class="stat">
+        <div class="stat-number">1M+</div>
+        <div class="stat-label">Pedidos/mes</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .final-cta {
+    padding: 100px 20px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    text-align: center;
+  }
+
+  .cta-container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .final-cta h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+
+  .final-cta > p {
+    font-size: 1.3rem;
+    margin-bottom: 2.5rem;
+    opacity: 0.9;
+  }
+
+  .cta-buttons {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    margin-bottom: 3rem;
+    flex-wrap: wrap;
+  }
+
+  .btn-large {
+    padding: 1.2rem 3rem;
+    font-size: 1.2rem;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: all 0.3s;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    border: none;
+    cursor: pointer;
+  }
+
+  .btn-primary {
+    background: #FF6B6B;
+    color: white;
+  }
+
+  .btn-primary:hover {
+    background: #FF5252;
+    transform: scale(1.05);
+  }
+
+  .btn-whatsapp {
+    background: #25D366;
+    color: white;
+  }
+
+  .btn-whatsapp:hover {
+    background: #1ba85c;
+    transform: scale(1.05);
+  }
+
+  .cta-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 3rem;
+    padding-top: 3rem;
+    border-top: 1px solid rgba(255,255,255,0.2);
+  }
+
+  .stat-number {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+
+  .stat-label {
+    font-size: 1rem;
+    opacity: 0.9;
+  }
+
+  @media (max-width: 768px) {
+    .final-cta h2 { font-size: 2rem; }
+    .final-cta > p { font-size: 1rem; }
+    .cta-buttons { gap: 1rem; }
+    .btn-large { padding: 1rem 1.5rem; font-size: 1rem; }
+    .cta-stats { grid-template-columns: 1fr; }
+  }
+</style>
+
+{% schema %}
+{
+  "name": "Llamada a la Acción Final",
+  "settings": [
+    {
+      "type": "text",
+      "id": "primary_btn_text",
+      "label": "Texto botón principal",
+      "default": "Empezar Gratis"
+    },
+    {
+      "type": "url",
+      "id": "primary_btn_link",
+      "label": "Link botón principal"
+    },
+    {
+      "type": "text",
+      "id": "whatsapp",
+      "label": "Número de WhatsApp (sin +)",
+      "default": "1234567890"
+    },
+    {
+      "type": "text",
+      "id": "whatsapp_btn_text",
+      "label": "Texto botón WhatsApp",
+      "default": "Contactar"
+    }
+  ]
+}
+{% endschema %}

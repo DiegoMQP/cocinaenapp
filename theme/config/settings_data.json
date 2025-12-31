@@ -1,0 +1,44 @@
+{
+  "current": "CocinaEnApp",
+  "presets": {
+    "CocinaEnApp": {
+      "colors": {
+        "primary": "#FF6B6B",
+        "secondary": "#4ECDC4",
+        "accent": "#45B7D1",
+        "background": "#F7F7F7",
+        "text": "#2C3E50"
+      },
+      "typography": {
+        "heading_font": "system-ui",
+        "body_font": "system-ui"
+      }
+    }
+  },
+  "sections": {
+    "header": {
+      "type": "header",
+      "disabled": false
+    },
+    "hero": {
+      "type": "hero",
+      "disabled": false
+    },
+    "benefits": {
+      "type": "benefits",
+      "disabled": false
+    },
+    "coverage": {
+      "type": "coverage-checker",
+      "disabled": false
+    },
+    "how-it-works": {
+      "type": "how-it-works",
+      "disabled": false
+    },
+    "final-cta": {
+      "type": "final-cta",
+      "disabled": false
+    }
+  }
+}

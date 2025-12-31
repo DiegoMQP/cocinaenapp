@@ -1,0 +1,38 @@
+{
+  "sections": {
+    "header": {
+      "type": "header"
+    },
+    "hero": {
+      "type": "hero",
+      "settings": {
+        "title": "Tu restaurante listo en apps de delivery",
+        "subtitle": "CocinaEnApp conecta tu menú con Uber Eats, DoorDash y más"
+      }
+    },
+    "benefits": {
+      "type": "benefits"
+    },
+    "coverage": {
+      "type": "coverage-checker"
+    },
+    "how_it_works": {
+      "type": "how-it-works"
+    },
+    "final_cta": {
+      "type": "final-cta"
+    },
+    "footer": {
+      "type": "footer"
+    }
+  },
+  "order": [
+    "header",
+    "hero",
+    "benefits",
+    "coverage",
+    "how_it_works",
+    "final_cta",
+    "footer"
+  ]
+}

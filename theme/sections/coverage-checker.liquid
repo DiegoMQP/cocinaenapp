@@ -1,0 +1,144 @@
+<section class="coverage-checker" id="cobertura">
+  <div class="coverage-container">
+    <h2>¿Operamos en tu ciudad?</h2>
+    <p class="coverage-subtitle">Verifica si CocinaEnApp está disponible en tu área</p>
+    
+    <div class="coverage-form">
+      <input type="text" id="zip-code" placeholder="Ingresa tu código postal" class="coverage-input">
+      <button onclick="checkCoverage()" class="coverage-btn">Verificar</button>
+    </div>
+
+    <div id="coverage-result" class="coverage-result hidden">
+      <div class="coverage-message"></div>
+    </div>
+
+    <div class="coverage-cities">
+      <h3>Ciudades Disponibles:</h3>
+      <div class="cities-list">
+        <span class="city-badge">Ciudad de México</span>
+        <span class="city-badge">Guadalajara</span>
+        <span class="city-badge">Monterrey</span>
+        <span class="city-badge">Puebla</span>
+        <span class="city-badge">Cancún</span>
+        <span class="city-badge">Merida</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .coverage-checker {
+    padding: 80px 20px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    text-align: center;
+  }
+
+  .coverage-container {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .coverage-checker h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .coverage-subtitle {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+  }
+
+  .coverage-form {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 3rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .coverage-input {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 50px;
+    flex: 1;
+    min-width: 250px;
+    font-size: 1rem;
+  }
+
+  .coverage-btn {
+    padding: 0.75rem 2rem;
+    background: #FF6B6B;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+
+  .coverage-btn:hover {
+    background: #FF5252;
+    transform: scale(1.05);
+  }
+
+  .coverage-result {
+    background: rgba(255,255,255,0.1);
+    padding: 1.5rem;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+  }
+
+  .coverage-result.hidden {
+    display: none;
+  }
+
+  .cities-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 1.5rem;
+  }
+
+  .city-badge {
+    background: rgba(255,255,255,0.2);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+  }
+
+  @media (max-width: 768px) {
+    .coverage-checker h2 { font-size: 1.8rem; }
+    .coverage-input { min-width: 100%; }
+  }
+</style>
+
+<script>
+  function checkCoverage() {
+    const zipCode = document.getElementById('zip-code').value;
+    const resultDiv = document.getElementById('coverage-result');
+    const messageDiv = resultDiv.querySelector('.coverage-message');
+    
+    if (!zipCode) {
+      messageDiv.innerHTML = '❌ Por favor ingresa un código postal';
+      resultDiv.classList.remove('hidden');
+      return;
+    }
+    
+    // Simulación - reemplazar con llamada a API real
+    messageDiv.innerHTML = '✅ ¡Operamos en tu zona! Contactanos para más información';
+    resultDiv.classList.remove('hidden');
+  }
+</script>
+
+{% schema %}
+{
+  "name": "Verificador de Cobertura",
+  "presets": [
+    {
+      "name": "Verificador por defecto"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,100 @@
+<header class="site-header">
+  <div class="header-container">
+    <div class="header-logo">
+      <h1>{{ section.settings.store_name }}</h1>
+    </div>
+    <nav class="header-nav">
+      <ul>
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#como-funciona">¿Cómo Funciona?</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+        <li><a href="https://wa.me/{{ section.settings.whatsapp_number }}" class="btn-whatsapp">
+          <i class="fab fa-whatsapp"></i> WhatsApp
+        </a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<style>
+  .site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 1rem 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  }
+
+  .header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .header-logo h1 {
+    font-size: 1.8rem;
+    margin: 0;
+    font-weight: bold;
+  }
+
+  .header-nav ul {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+  }
+
+  .header-nav a {
+    color: white;
+    text-decoration: none;
+    transition: opacity 0.3s;
+  }
+
+  .header-nav a:hover {
+    opacity: 0.8;
+  }
+
+  .btn-whatsapp {
+    background: #25D366;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  @media (max-width: 768px) {
+    .header-nav ul {
+      gap: 1rem;
+      font-size: 0.9rem;
+    }
+  }
+</style>
+
+{% schema %}
+{
+  "name": "Header",
+  "settings": [
+    {
+      "type": "text",
+      "id": "store_name",
+      "label": "Nombre de la tienda",
+      "default": "CocinaEnApp"
+    },
+    {
+      "type": "text",
+      "id": "whatsapp_number",
+      "label": "Número de WhatsApp (sin +)",
+      "default": "1234567890"
+    }
+  ]
+}
+{% endschema %}

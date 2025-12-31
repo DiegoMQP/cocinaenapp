@@ -1,0 +1,75 @@
+[
+  {
+    "name": "theme_info",
+    "theme": {
+      "name": "CocinaEnApp",
+      "id": 123456789
+    }
+  },
+  {
+    "name": "Configuración General",
+    "settings": [
+      {
+        "type": "text",
+        "id": "store_name",
+        "label": "Nombre de la tienda",
+        "default": "CocinaEnApp"
+      },
+      {
+        "type": "text",
+        "id": "whatsapp_number",
+        "label": "Número de WhatsApp",
+        "default": "+1234567890"
+      },
+      {
+        "type": "color",
+        "id": "color_primary",
+        "label": "Color Primario",
+        "default": "#FF6B6B"
+      },
+      {
+        "type": "color",
+        "id": "color_secondary",
+        "label": "Color Secundario",
+        "default": "#4ECDC4"
+      }
+    ]
+  },
+  {
+    "name": "Tipografía",
+    "settings": [
+      {
+        "type": "font_picker",
+        "id": "font_heading",
+        "label": "Fuente de Títulos",
+        "default": "system-ui"
+      },
+      {
+        "type": "font_picker",
+        "id": "font_body",
+        "label": "Fuente de Cuerpo",
+        "default": "system-ui"
+      }
+    ]
+  },
+  {
+    "name": "Redes Sociales",
+    "settings": [
+      {
+        "type": "text",
+        "id": "social_facebook",
+        "label": "Facebook URL"
+      },
+      {
+        "type": "text",
+        "id": "social_instagram",
+        "label": "Instagram URL"
+      },
+      {
+        "type": "text",
+        "id": "social_twitter",
+        "label": "Twitter URL"
+      }
+    ]
+  }
+]
