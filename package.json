@@ -11,18 +11,18 @@
     "setup-hydrogen": "npm install"
   },
   "dependencies": {
-    "@shopify/cli": "^3.59.0",
     "@shopify/hydrogen": "^2024.1.0",
-    "@shopify/remix": "^2.0.0",
+    "@remix-run/react": "^2.0.0",
+    "@remix-run/server-runtime": "^2.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "remix": "^2.0.0",
     "isbot": "^3.8.0",
     "compression": "^1.7.4"
   },
   "devDependencies": {
-    "@vitejs/plugin-react": "^4.2.1",
     "@remix-run/dev": "^2.0.0",
+    "@shopify/cli": "^3.59.0",
+    "@vitejs/plugin-react": "^4.2.1",
     "@types/react": "^18.2.0",
     "@types/react-dom": "^18.2.0",
     "vite": "^5.0.8",
