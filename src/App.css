@@ -1,0 +1,8 @@
+.App {
+  min-height: 100vh;
+  background-color: var(--color-white);
+}
+
+main {
+  position: relative;
+}

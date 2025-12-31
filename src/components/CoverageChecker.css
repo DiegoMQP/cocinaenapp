@@ -1,0 +1,307 @@
+.coverage-checker {
+  background-color: var(--color-light);
+  position: relative;
+}
+
+.coverage-header {
+  text-align: center;
+  margin-bottom: var(--spacing-xl);
+}
+
+.coverage-title {
+  font-size: 2.5rem;
+  margin-bottom: var(--spacing-sm);
+  color: var(--color-text);
+}
+
+.coverage-subtitle {
+  font-size: 1.25rem;
+  color: var(--color-text-light);
+}
+
+.cities-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-xl);
+}
+
+.city-card {
+  background-color: var(--color-white);
+  padding: var(--spacing-lg);
+  border-radius: var(--border-radius);
+  text-align: center;
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  cursor: pointer;
+}
+
+.city-card:hover {
+  transform: translateY(-8px);
+  border-color: var(--color-primary);
+  box-shadow: 0 12px 32px rgba(74, 222, 128, 0.15);
+}
+
+.city-icon {
+  font-size: 3rem;
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-md);
+}
+
+.city-name {
+  font-size: 1.25rem;
+  color: var(--color-text);
+  font-weight: 600;
+}
+
+.coverage-cta {
+  text-align: center;
+  margin-top: var(--spacing-xl);
+  padding: var(--spacing-lg);
+  background-color: var(--color-white);
+  border-radius: var(--border-radius);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.coverage-note {
+  font-size: 1.15rem;
+  color: var(--color-text);
+  margin-bottom: var(--spacing-md);
+  font-weight: 500;
+}
+
+.btn-coverage {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  padding: 1rem 2.5rem;
+  border-radius: var(--border-radius);
+  border: none;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-coverage:hover {
+  background-color: var(--color-primary-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(74, 222, 128, 0.3);
+}
+
+.coverage-search-container {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.coverage-search-form {
+  position: relative;
+}
+
+.search-input-wrapper {
+  display: flex;
+  gap: var(--spacing-sm);
+  background-color: var(--color-white);
+  padding: var(--spacing-xs);
+  border-radius: var(--border-radius);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.search-input-wrapper:focus-within {
+  border-color: var(--color-primary);
+  box-shadow: 0 4px 16px rgba(74, 222, 128, 0.2);
+}
+
+.coverage-search-input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  padding: 1rem 1.5rem;
+  font-size: 1.1rem;
+  color: var(--color-text);
+  outline: none;
+}
+
+.coverage-search-input::placeholder {
+  color: var(--color-text-light);
+}
+
+.coverage-search-btn {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.coverage-search-btn:hover {
+  background-color: var(--color-primary-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(74, 222, 128, 0.3);
+}
+
+.coverage-results-dropdown {
+  position: absolute;
+  top: calc(100% + 0.5rem);
+  left: 0;
+  right: 0;
+  background-color: var(--color-white);
+  border-radius: var(--border-radius);
+  border: 2px solid var(--color-primary);
+  max-height: 300px;
+  overflow-y: auto;
+  z-index: 100;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.coverage-result-item {
+  padding: 1rem 1.5rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.coverage-result-item:hover {
+  background-color: var(--color-light);
+}
+
+.coverage-result-item:last-child {
+  border-bottom: none;
+}
+
+.result-city {
+  color: var(--color-text);
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.result-state {
+  color: var(--color-text-light);
+  font-size: 0.9rem;
+}
+
+.coverage-result {
+  margin-top: var(--spacing-lg);
+  padding: var(--spacing-lg);
+  border-radius: var(--border-radius);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  animation: slideDown 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.coverage-result.has-coverage {
+  background-color: rgba(74, 222, 128, 0.1);
+  border: 2px solid var(--color-primary);
+}
+
+.coverage-result.no-coverage {
+  background-color: rgba(239, 68, 68, 0.05);
+  border: 2px solid rgba(239, 68, 68, 0.3);
+}
+
+.result-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.has-coverage .result-icon {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+.no-coverage .result-icon {
+  background-color: rgba(239, 68, 68, 0.1);
+  color: #ef4444;
+}
+
+.result-content h3 {
+  font-size: 1.35rem;
+  margin-bottom: 0.5rem;
+  color: var(--color-text);
+}
+
+.result-content p {
+  color: var(--color-text-light);
+  line-height: 1.6;
+}
+
+.coverage-note {
+  margin-top: var(--spacing-lg);
+  text-align: center;
+  padding: var(--spacing-md);
+  background-color: var(--color-white);
+  border-radius: var(--border-radius);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.coverage-note p {
+  color: var(--color-text);
+  font-size: 1.05rem;
+  font-weight: 500;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .coverage-title {
+    font-size: 2rem;
+  }
+
+  .coverage-subtitle {
+    font-size: 1.1rem;
+  }
+
+  .search-input-wrapper {
+    flex-direction: column;
+    gap: var(--spacing-xs);
+  }
+
+  .coverage-search-input {
+    padding: 0.85rem 1rem;
+    font-size: 1rem;
+  }
+
+  .coverage-search-btn {
+    width: 100%;
+    padding: 0.85rem;
+  }
+
+  .coverage-result {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .result-icon {
+    width: 50px;
+    height: 50px;
+    font-size: 1.5rem;
+  }
+}
