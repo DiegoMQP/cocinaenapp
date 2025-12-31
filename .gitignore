@@ -1,8 +1,28 @@
 node_modules/
 dist/
+build/
 .env
 .env.local
 .DS_Store
 *.log
 .vscode/
 .idea/
+
+# Hydrogen/Remix specific
+.hydrogen/
+.cache/
+public/build/
+.remix/
+
+# OS files
+Thumbs.db
+.DS_Store
+
+# Development
+.wrangler/
+.turbo/
+node_modules/.bin
+
+# Build artifacts
+*.js.map
+*.css.map
